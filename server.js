@@ -61,7 +61,7 @@ app.get('/about/board', function(req, res) {
     res.locals.title = "Board - Clear Net Security Project"; 
     res.locals.description = null; 
     res.locals.keywords = null;
-    res.render('pages/about/board');
+    res.render('pages/about/board_members');
 });
 app.get('/about/brand_resources', function(req, res) {
     res.locals.title = "Brand Resources - Clear Net Security Project"; 
@@ -79,7 +79,7 @@ app.get('/about/staff', function(req, res) {
     res.locals.title = "Staff - Clear Net Security Project"; 
     res.locals.description = null; 
     res.locals.keywords = null;
-    res.render('pages/about/staff');
+    res.render('pages/about/staff_team');
 });
 app.get('/chapters', function(req, res) {
     res.locals.title = "Chapters - Clear Net Security Project"; 
