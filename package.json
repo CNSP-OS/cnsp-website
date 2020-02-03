@@ -1,0 +1,32 @@
+{
+  "name": "cnsp-website",
+  "version": "3.0.6",
+  "description": "Code for the CNSP website.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GodAresss/cnsp-website.git"
+  },
+  "keywords": [
+    "cnsp",
+    "website",
+    "clear",
+    "net",
+    "security",
+    "project"
+  ],
+  "author": "Akshit Kumar",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/GodAresss/cnsp-website/issues"
+  },
+  "homepage": "https://github.com/GodAresss/cnsp-website#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}

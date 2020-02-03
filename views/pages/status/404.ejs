@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /> <meta name="author" content="CNSP" />
+<meta name="description" content="Clear Net Security Porject. Let's make Internet safer by conjointly tackling evolving threats online.">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+
+<title>404 | Clear Net Security Project</title>
+
+<link href="/css/plugins.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="body-inner">
+
+   <header id="header" data-transparent="true" data-fullwidth="true" class="submenu-light">
+      <div class="header-inner">
+      <div class="container">
+      
+      <div id="logo">
+      <a href="/">
+      <span class="logo-default">CNSP</span>
+      <span class="logo-dark">CNSP</span>
+      </a>
+      </div>
+      </div>
+      </div>
+      </header>
+
+
+<section class="m-t-80 p-b-150">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<div class="page-error-404">404</div>
+</div>
+<div class="col-lg-6">
+<div class="text-left">
+<h1 class="text-medium">This is an error!</h1>
+<p class="lead">The requested URL <url id="404location"></url>
+<script>
+   document.getElementById("404location").innerHTML = 
+   window.location.href.replace('http://localhost', '');
+</script> has been removed, had its name changed, or is temporarily unavailable. Now, that's all.</p>
+<div class="seperator m-t-20 m-b-20"></div>
+<div class="search-form">
+   <p>Let's try searching for what you were looking for...</p>
+   <form action="/search-results-page" method="get" class="form-inline">
+      <div class="input-group input-group-lg">
+      <input type="text" aria-required="true" name="q" class="form-control widget-search-form" placeholder="Search for pages...">
+      <div class="input-group-append">
+      <span class="input-group-btn">
+      <button type="submit" id="widget-widget-search-form-button" class="btn"><i class="fa fa-search"></i></button>
+      </span>
+      </div>
+      </div>
+      </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<%- include('../layout/bottom'); %>
