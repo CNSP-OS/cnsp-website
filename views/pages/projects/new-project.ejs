@@ -1,0 +1,173 @@
+<%- include('../layout/top'); %>
+         <section id="page-title" data-bg-parallax="images/parallax/5.jpg">
+            <div class="container">
+               <div class="page-title">
+                  <h1>Create New Project</h1>
+                  <span>Request to start a new CNSP project.</span>
+               </div>
+               <div class="breadcrumb">
+                  <ul>
+                     <li><a href="#">Home</a> </li>
+                     <li><a href="#">Projects</a> </li>
+                     <li class="active"><a href="#">Create New</a> </li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+         <section id="page-content">
+            <div class="container">
+               <div class="row">
+                  <div class="content col-lg-12">
+                     <form class="form-validate gform" id="new-project" action="/api/register/new-project" method="POST">
+                        <div class="form-group">
+                           <label for="projectname">
+                              Project Name 
+                              <req style="color:red;">*</req>
+                           </label>
+                           <input name="projectname" type="text" class="form-control" id="projectname" placeholder="east-rainstorm" required />
+                        </div>
+                        <div class="form-group">
+                           <label for="projecttype">
+                              Project Type 
+                              <req style="color:red;">*</req>
+                           </label>
+                           <select class="form-control" id="projecttype" name="projecttype">
+                              <option>Code Project</option>
+                              <option>Documentation Project</option>
+                              <option>Research Project</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label for="projectlicense">
+                              Open Source License 
+                              <req style="color:red;">*</req>
+                           </label>
+                           <select class="form-control" id="projectlicense" name="projectlicense">
+                              <option>MIT</option>
+                              <option>GPL</option>
+                              <option>Apache 2.0</option>
+                              <option>GPL 2.0</option>
+                              <option>BSD 3</option>
+                              <option>LGPL 2.1</option>
+                              <option>Ms-Pl</option>
+                              <option>BSD 2</option>
+                              <option>AGPL 3.0</option>
+                              <option>MPL 2.0</option>
+                              <option>LGPL 2.1
+                              <option>Zlib</option>
+                              <option>Eclipse 1.0</option>
+                              <option>BSD 4</option>
+                              <option>Other (Specified in comments)</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label for="githubrepo">GitHub Repository</label>
+                           <input type="text" class="form-control" id="githubrepo" placeholder="CNSP-OS/MD5-API" name="githubrepo">
+                        </div>
+                        <div class="form-group">
+                           <label for="leadername">
+                              Leader Name 
+                              <req style="color:red;">*</req>
+                           </label>
+                           <input type="text" class="form-control" id="leadername" placeholder="Blooming Ender" name="leadername">
+                        </div>
+                        <div class="form-group">
+                           <label for="leaderemail">
+                              Leader Email 
+                              <req style="color:red;">*</req>
+                           </label>
+                           <input type="email" class="form-control" id="leaderemail" placeholder="ares@cnsp.codes" name="leaderemail">
+                        </div>
+                        <div class="form-group">
+                           <label for="projectdesc">
+                              Project Description 
+                              <req style="color:red;">*</req>
+                           </label>
+                           <textarea class="form-control" id="projectdesc" rows="3" name="projectdesc"></textarea>
+                        </div>
+                        <div class="form-group">
+                           <label for="projectrmap">
+                              Project Roadmap 
+                              <req style="color:red;">*</req>
+                           </label>
+                           <textarea class="form-control" id="projectrmap" rows="3" name="projectrmap"></textarea>
+                        </div>
+                        <div class="form-group">
+                           <label for="addcomments">Additional Comments</label>
+                           <textarea class="form-control" id="addcomments" rows="3" name="addcomments"></textarea>
+                        </div>
+                        <div class="form-group">
+                           <label id="ebcaptchatext" for="ebcaptchainput"></label>
+                           <input type="text" class="form-control" id="ebcaptchainput"/>
+                        </div>
+                        <button type="submit" class="btn m-t-30 mt-3">Submit</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <footer id="footer">
+            <%- include('../../partials/footer'); %>
+        </footer>
+        <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
+        <script src="/js/jquery.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/functions.js"></script>
+        <script>
+            $(function(){
+          $('#new-project').ebcaptcha();
+        });
+        
+        (function($){
+        
+           jQuery.fn.ebcaptcha = function(options){
+        
+              var element = this; 
+                var input = this.find('#ebcaptchainput');
+              var label = this.find('#ebcaptchatext');
+                    $(element).find('button[type=submit]').attr('disabled','disabled'); 
+        
+              var randomNr1 = 0; 
+              var randomNr2 = 0;
+              var totalNr = 0;
+        
+        
+              randomNr1 = Math.floor(Math.random()*10);
+              randomNr2 = Math.floor(Math.random()*10);
+              totalNr = randomNr1 + randomNr2;
+              var texti = "What is "+randomNr1+" + "+randomNr2 + "?";
+              $(label).text(texti);
+              
+           
+              $(input).keyup(function(){
+        
+                    var nr = $(this).val();;
+                 if(nr==totalNr)
+                 {
+                    $(element).find('button[type=submit]').removeAttr('disabled');				
+                 }
+                 else{
+                    $(element).find('button[type=submit]').attr('disabled','disabled');
+                 }
+                 
+              });
+        
+              $(document).keypress(function(e)
+              {
+                 if(e.which==13)
+                 {
+                    if((element).find('button[type=submit]').is(':disabled')==true)
+                    {
+                       e.preventDefault();
+                       return false;
+                    }
+                 }
+        
+              });
+        
+           };
+        
+        })(jQuery);
+        </script>
+        </body>
+        </html>
