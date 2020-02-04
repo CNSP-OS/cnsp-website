@@ -27,7 +27,7 @@ Install the following tools if you don't have them already.
 -   **[Express](https://expressjs.com/)**, Fast, unopinionated, minimalist web framework for [Node.js](https://nodejs.org/en/).
 -   **[Mongoose](https://expressjs.com/)**, elegant [mongodb](https://www.mongodb.com/) object modeling for [node.js](https://nodejs.org/en/).
 -   **[MongoDB](https://www.mongodb.com/community)**, MongoDB is a document database.
--   **[EJS](https://www.mongodb.com/community)**, MongoDB is a document database.
+-   **[EJS](https://ejs.co)**, a simple templating language.
 
 ## Before you build
 
