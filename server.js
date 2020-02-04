@@ -2,7 +2,14 @@
 // load the things we need
 var express = require('express');
 var app = express();
-
+var marked = require("marked");
+var fs = require('fs')
+var md = function (filename) {
+    var path = __dirname +"/views/md/" + filename;
+    var include = fs.readFileSync (path, 'utf8');
+    var html = marked (include);
+    return html;
+  };
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -49,7 +56,7 @@ app.get('/chapters', function(req, res) {
     res.locals.title = "Chapters - Clear Net Security Project"; 
     res.locals.description = null; 
     res.locals.keywords = null;
-    res.render('pages/chapters/index');
+    res.render('pages/chapters/index', {"md": md});
 });
 app.get('/chapters/new', function(req, res) {
     res.locals.title = "New Chapter - Clear Net Security Project"; 
@@ -61,19 +68,19 @@ app.get('/chapters/asia', function(req, res) {
     res.locals.title = "Asia - Clear Net Security Project"; 
     res.locals.description = null; 
     res.locals.keywords = null;
-    res.render('pages/chapters/asia/index');
+    res.render('pages/chapters/asia/index', {"md": md});
 });
 app.get('/chapters/asia/india', function(req, res) {
     res.locals.title = "India - Clear Net Security Project"; 
     res.locals.description = null; 
     res.locals.keywords = null;
-    res.render('pages/chapters/asia/india/index');
+    res.render('pages/chapters/asia/india/index', {"md": md});
 });
 app.get('/chapters/asia/india/delhi', function(req, res) {
     res.locals.title = "Delhi - Clear Net Security Project"; 
     res.locals.description = null; 
     res.locals.keywords = null;
-    res.render('pages/chapters/asia/india/delhi/index');
+    res.render('pages/chapters/asia/india/delhi/index', {"md": md});
 });
 app.get('/chapters/*', function(req, res) {
     res.locals.title = "Not Found - Clear Net Security Project"; 
