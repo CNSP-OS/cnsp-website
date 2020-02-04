@@ -3,7 +3,7 @@
 <div class="container">
 <div class="page-title">
 <h1>Search Results</h1>
-<span>Fully functional search result reulst based on google search app</span>
+<span>Fully functional search result based on google search app</span>
 </div>
 <div class="breadcrumb">
 <ul>
@@ -30,11 +30,11 @@
                         var s = document.getElementsByTagName('script')[0];
                         s.parentNode.insertBefore(gcse, s);
                     })();
-                </script>
+</script>
 <gcse:searchresults-only></gcse:searchresults-only>
 
 </div>
 </section>
+<!-- Fixed 500. Two (s in include function. Added "'" -->
 
-
-<%- include((./layout/bottom'); %>
+<%- include('./layout/bottom'); %>
