@@ -2,7 +2,43 @@
 // load the things we need
 var express = require('express');
 var app = express();
-
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:3332'); 
+var db=mongoose.connection; 
+db.on('error', console.log.bind(console, "connection error")); 
+db.once('open', function(callback){ 
+	console.log("connection succeeded"); 
+}) 
+app.post('REDACTED', function(req,res){ 
+// Redacted
+db.collection('REDACTED').insertOne(data,function(err, collection){ 
+		if (err) throw err; 
+		console.log("Record inserted Successfully"); 
+			
+	}); 
+		
+	return res.redirect('REDACTED'); 
+})
+app.post('REDACTED', function(req,res){ 
+// Redacted
+db.collection('REDACTED').insertOne(data,function(err, collection){ 
+		if (err) throw err; 
+		console.log("Record inserted Successfully"); 
+			
+	}); 
+		
+	return res.redirect('REDACTED'); 
+}) 
+app.post('REDACTED', function(req,res){ 
+// Redacted
+db.collection('REDACTED').insertOne(data,function(err, collection){ 
+		if (err) throw err; 
+		console.log("Record inserted Successfully"); 
+			
+	}); 
+		
+	return res.redirect('REDACTED'); 
+})
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
