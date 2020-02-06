@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <%- include('../../partials/head'); %>
-</head>
-
-<body>
-    <div class="body-inner">
-        <header id="header" data-transparent="true" data-fullwidth="true">
-            <%- include('../../partials/header'); %>
-        </header>
-
+<% var title = "Not Found" %>
+<% var headerclass= "none" %>
+<%- include('../../partials/top'); %>
 <section class="m-t-80 p-b-150">
 <div class="container">
 <div class="row">
@@ -20,7 +10,7 @@
 <div class="col-lg-6">
 <div class="text-left">
 <h1 class="text-medium">This is an error!</h1>
-<p class="lead">The requested URL <%= url %> has been removed, had its name changed, or is temporarily unavailable. Now, that's all.</p>
+<p class="lead">The requested URL <%= four %> has been removed, had its name changed, or is temporarily unavailable. Now, that's all.</p>
 <div class="seperator m-t-20 m-b-20"></div>
 <div class="search-form">
    <p class="active">Let's try searching for what you were looking for...</p>
@@ -40,4 +30,4 @@
 </div>
 </div>
 </section>
-<%- include('../layout/bottom'); %>
+<%- include('../../partials/bottom'); %>
