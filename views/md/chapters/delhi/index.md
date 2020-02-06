@@ -57,7 +57,7 @@ Would you like to talk at our next meet? We will have a spot ready for you if yo
 
 -------
 
-The CNSP Foundation is a professional association of global members and is open to anyone interested in learning more about network security. Local chapters are run independently and guided by the [Chapter Leader Handbook](/chapters/leader_handbook). As a non-profit professional association your support and sponsorship of any meeting venue and/or refreshments is tax-deductible. Financial contributions should only be made online using the authorized online chapter donation button. To be a SPEAKER at ANY OWASP Chapter in the world simply review the [speaker agreement](/chapters/speaker_agreement) and then contact the local chapter leader with details of what CNSP PROJECT, independent research or related network security topic you would like to present on.
+The CNSP Foundation is a professional association of global members and is open to anyone interested in learning more about network security. Local chapters are run independently and guided by the [Chapter Leader Handbook](/chapters/leader_handbook). As a non-profit professional association your support and sponsorship of any meeting venue and/or refreshments is tax-deductible. Financial contributions should only be made online using the authorized online chapter donation button. To be a SPEAKER at ANY CNSP Chapter in the world simply review the [speaker agreement](/chapters/speaker_agreement) and then contact the local chapter leader with details of what CNSP PROJECT, independent research or related network security topic you would like to present on.
 
 <br><br>
 <div class="tabs">
