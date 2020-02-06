@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <%- include('../../partials/head'); %>
-</head>
-
-<body>
-    <div class="body-inner">
-        <header id="header" data-transparent="true" data-fullwidth="true">
-            <%- include('../../partials/header'); %>
-        </header>
+<% var title = "Server Error" %>
+<% var headerclass= "none" %>
+<%- include('../../partials/top'); %>
 <section class="m-t-80 p-b-150">
 <div class="container">
 <div class="row">
@@ -19,11 +10,13 @@
 <div class="col-lg-6">
 <div class="text-left">
 <h1 class="text-medium">Server Error!</h1>
-<p class="lead">We are sorry, this is an error on our end! Please send us the URL you were trying to reach and the screenshot by <a href="contact">contacting us</a>.</p>
+<p class="lead">We are sorry, this is an error on our end! Please send us the URL you were trying to reach and the error code by <a href="contact">contacting us</a>.</p>
+<code> <%= rror %> </code>
 <div class="seperator m-t-20 m-b-20"></div><button onclick="window.location.reload()" class="btn" type="button">Reload Page</button>
+
 </div>
 </div>
 </div>
 </div>
 </section>
-<%- include('../layout/bottom'); %>
+<%- include('../../partials/bottom'); %>

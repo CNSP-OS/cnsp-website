@@ -1,4 +1,5 @@
-<%- include('./layout/top'); %>
+<% scripts = `<script src="/plugins/particles/particles.js"></script><script src="/plugins/particles/particles-dots.js"></script><script type="text/javascript">$(window).on('load',function(){$('#modal-3').modal('show');});</script>` %>
+<%- include('../partials/top'); %>
         <section class="fullscreen background-colored">
             <div class="container">
                 <div class="container-fullscreen">
@@ -237,19 +238,4 @@
                 </div>
             </div>
         </section>
-        <footer id="footer">
-            <%- include('../partials/footer'); %>
-        </footer>
-        <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
-        <script src="/js/jquery.js"></script>
-        <script src="/js/plugins.js"></script>
-        <script src="/js/functions.js"></script>
-        <script src="/plugins/particles/particles.js"></script>
-        <script src="/plugins/particles/particles-dots.js"></script>
-        <script type="text/javascript">
-            $(window).on('load',function(){
-                $('#modal-3').modal('show');
-            });
-            </script>
-        </body>
-        </html>
+            <%- include('../partials/bottom'); %>

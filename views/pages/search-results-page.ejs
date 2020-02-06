@@ -1,4 +1,6 @@
-<%- include('./layout/top'); %>
+<% var title = "Search Results" %>
+<% var headerclass= "none" %>
+<%- include('../partials/top'); %>
 <section id="page-title">
 <div class="container">
 <div class="page-title">
@@ -7,9 +9,8 @@
 </div>
 <div class="breadcrumb">
 <ul>
-<li><a href="#">Home</a> </li>
-<li><a href="#">Layout</a> </li>
-<li class="active"><a href="#">Widgets</a> </li>
+<li><a href="/">Home</a> </li>
+<li class="active"><a href="search-results-page">Results</a> </li>
 </ul>
 </div>
 </div>
@@ -37,4 +38,4 @@
 </section>
 <!-- Fixed 500. Two (s in include function. Added "'" -->
 
-<%- include('./layout/bottom'); %>
+<%- include('../partials/bottom'); %>

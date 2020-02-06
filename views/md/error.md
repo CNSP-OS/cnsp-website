@@ -1,0 +1,1 @@
+#### You might've forgotten to add the the variable <code><% var mdpath="your/md/path" %></code> to your EJS file!
