@@ -1,25 +1,25 @@
  <!-- Primary Meta Tags -->
-    <title><% if (title != null) { %>
-        <%= title %>
+    <title><% if (!title) { %>
+        Clear Net Security Project
         <% } else { %>
-            CNSP - Clear Net Security Project
+            <%=title %> - Clear Net Security Project
         <% } %></title> 
-    <meta name="title" content=<% if (title != null) { %>
-        <%= title %>
+    <meta name="title" content="<% if (!title) { %>
+        Clear Net Security Project
         <% } else { %>
-            "CNSP Foundation, the Open Source Foundation for Network Security, is a nonprofit foundation that works to improve the security of the Internet."
-        <% } %>>
+            <%=title %> - Clear Net Security Project
+        <% } %>">
     <meta name="description"
-        content=<% if (description != null) { %>
-            <%= description %>
+        content="<% if (!description) { %>
+            CNSP Foundation, the Open Source Foundation for Network Security, is a not-for-profit foundation that works to improve the security of the Internet.
             <% } else { %>
-                "CNSP Foundation, the Open Source Foundation for Network Security, is a nonprofit foundation that works to improve the security of the Internet."
-            <% } %>>
-    <meta name="keywords" content=<% if (keywords != null) { %>
-        <%= keywords %>
+                <%= description %>
+            <% } %>">
+    <meta name="keywords" content="<% if (!keywords) { %>
+        cnsp, clearnet, clear net security project, cnsp codes
         <% } else { %>
-            "cnsp, clearnet, clear net security project, cnsp codes"
-        <% } %>>
+            <%= keywords %>, cnsp, clearnet, clear net security project, cnsp codes
+        <% } %>">
 
     <!-- Other Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,34 +33,42 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cnsp.codes/">
-    <meta property="og:title" content=<% if (title != null) { %>
-        <%= title %>
+    <meta property="og:title" content="<% if (!title) { %>
+        Clear Net Security Project
         <% } else { %>
-            "CNSP Foundation, the Open Source Foundation for Network Security, is a nonprofit foundation that works to improve the security of the Internet."
-        <% } %>>
+            <%= title %> - Clear Net Security Project
+        <% } %>">
     <meta property="og:description"
-        content=<% if (description != null) { %>
-            <%= description %>
+        content="<% if (!description) { %>
+            CNSP Foundation, the Open Source Foundation for Network Security, is a not-for-profit foundation that works to improve the security of the Internet.
             <% } else { %>
-                "CNSP Foundation, the Open Source Foundation for Network Security, is a nonprofit foundation that works to improve the security of the Internet."
-            <% } %>>
-    <meta property="og:image" content="/images/splash-200.png">
+                <%= description %>
+            <% } %>">
+    <meta property="og:image" content="<% if (!splashimage) { %>
+        /images/splash-200.png
+        <% } else { %>
+            <%= splashimage %>
+        <% } %>">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://cnsp.codes/">
-    <meta property="twitter:title" content=<% if (title != null) { %>
-        <%= title %>
+    <meta property="twitter:url" content="<%= url %>">
+    <meta property="twitter:title" content="<% if (!title) { %>
+        Clear Net Security Project
         <% } else { %>
-            "CNSP Foundation, the Open Source Foundation for Network Security, is a nonprofit foundation that works to improve the security of the Internet."
-        <% } %>>
+            <%= title %> - Clear Net Security Project
+        <% } %>">
     <meta property="twitter:description"
-        content=<% if (description != null) { %>
-            <%= description %>
+        content="<% if (!description) { %>
+            CNSP Foundation, the Open Source Foundation for Network Security, is a not-for-profit foundation that works to improve the security of the Internet.
             <% } else { %>
-                "CNSP Foundation, the Open Source Foundation for Network Security, is a nonprofit foundation that works to improve the security of the Internet."
-            <% } %>>
-    <meta property="twitter:image" content="/images/splash-200.png">
+                <%= description %>
+            <% } %>">
+    <meta property="twitter:image" content="<% if (!splashimage) { %>
+        /images/splash-200.png
+        <% } else { %>
+            <%= splashimage %>
+        <% } %>">
 
     <!-- Styling Files -->
     <link href="/css/plugins.css" rel="stylesheet">
