@@ -28,6 +28,6 @@
   "dependencies": {
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "marked": "^0.8.0"
+    "marked": "^4.0.10"
   }
 }
